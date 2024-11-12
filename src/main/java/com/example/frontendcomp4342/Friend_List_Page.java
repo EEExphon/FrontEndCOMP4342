@@ -4,17 +4,12 @@ import android.os.Bundle;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
-import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
 
-import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.graphics.Insets;
-import androidx.core.view.ViewCompat;
-import androidx.core.view.WindowInsetsCompat;
 
-public class MainActivity extends AppCompatActivity {
+public class Friend_List_Page extends AppCompatActivity {
 
     // Friend Name
     private String[] friendName = {"Katou Megumi", "Misaka Mikoto", "Sora Ginko", "Katou Megumi", "Misaka Mikoto", "Sora Ginko", "Katou Megumi", "Misaka Mikoto", "Sora Ginko", "Katou Megumi", "Misaka Mikoto", "Sora Ginko", "Katou Megumi", "Misaka Mikoto", "Sora Ginko"};
@@ -50,13 +45,15 @@ public class MainActivity extends AppCompatActivity {
         @Override
         public View getView(int i, View convertView, ViewGroup viewGroup) {
             //1. 加载布局
-            View view = View.inflate(MainActivity.this, R.layout.item_list, null);
+            View view = View.inflate(Friend_List_Page.this, R.layout.item_list, null);
 
             //2.获取控件
             TextView name = view.findViewById(R.id.name1);
+            TextView capN = view.findViewById(R.id.capName);
 
             //设置数据
             name.setText(friendName[i]);
+            capN.setText(friendName[i].substring(0,1));
             return view;
         }
     }
