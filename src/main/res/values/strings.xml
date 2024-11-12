@@ -7,4 +7,11 @@
     <string name="Misaka">Misaka Mikoto</string>
     <string name="back_button">Back</string>
     <string name="K">K</string>
+    <string name="welcome_to_chatnexus">Welcome to ChatNexus</string>
+    <string name="please_login">Please Login</string>
+    <string name="e_mail_address">E-Mail Address:</string>
+    <string name="password">Password:      </string>
+    <string name="login">Login</string>
+    <string name="do_not_have_chatnexus_account_yet_register_now">Do not have ChatNexus account yet? Register now!</string>
+    <string name="register">Register</string>
 </resources>

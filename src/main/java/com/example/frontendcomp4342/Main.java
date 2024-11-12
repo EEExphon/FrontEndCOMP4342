@@ -9,17 +9,26 @@ import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-public class Friend_List_Page extends AppCompatActivity {
+public class Main extends AppCompatActivity {
 
     // Friend Name
-    private String[] friendName = {"Katou Megumi", "Misaka Mikoto", "Sora Ginko", "Katou Megumi", "Misaka Mikoto", "Sora Ginko", "Katou Megumi", "Misaka Mikoto", "Sora Ginko", "Katou Megumi", "Misaka Mikoto", "Sora Ginko", "Katou Megumi", "Misaka Mikoto", "Sora Ginko"};
+    private String[] friendName = {"Katou Megumi", "Misaka Mikoto", "Sora Ginko",
+            "Katou Megumi", "Misaka Mikoto", "Sora Ginko",
+            "Katou Megumi", "Misaka Mikoto", "Sora Ginko",
+            "Katou Megumi", "Misaka Mikoto", "Sora Ginko",
+            "Katou Megumi", "Misaka Mikoto", "Sora Ginko"};
+
+    // Setter and getter
+    public void setFriendName(String[] friendName) {this.friendName = friendName;}
+    public String[] getFriendName() {return friendName;}
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        setContentView(R.layout.welcome_page);
 
-        //1.获取ListView对象
+        //获取ListView对象
         ListView listView = findViewById(R.id.listView);
         myAdapter myAdapter = new myAdapter();
         listView.setAdapter(myAdapter);
@@ -45,7 +54,7 @@ public class Friend_List_Page extends AppCompatActivity {
         @Override
         public View getView(int i, View convertView, ViewGroup viewGroup) {
             //1. 加载布局
-            View view = View.inflate(Friend_List_Page.this, R.layout.item_list, null);
+            View view = View.inflate(Main.this, R.layout.item_list, null);
 
             //2.获取控件
             TextView name = view.findViewById(R.id.name1);

@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".Friend_List_Page">
+    tools:context=".Main">
 
     <FrameLayout
         android:layout_width="match_parent"
@@ -14,20 +14,14 @@
         android:gravity="center_horizontal"
         android:orientation="horizontal"
         android:background="#83d0ff"
-        tools:context=".MainActivity">
+        tools:context=".Main">
 
-        <TextView
-            android:text="@string/back_button"
-            android:textSize="30sp"
-            android:textAlignment="center"
-            android:textColor="#fff"
-            android:background="#00f"
-            android:layout_width="70dp"
-            android:layout_height="60dp"
-            android:layout_marginStart="10dp"
-            android:layout_marginTop="25dp"
-            android:clickable="true"
-            android:focusable="true"/>
+        <Button
+            android:id="@+id/back_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:text="@string/back_button" />
 
         <TextView
             android:layout_width="match_parent"
