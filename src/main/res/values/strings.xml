@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">FrontEndCOMP4342</string>
+    <string name="friend_list_title">Friend List</string>
+
+    <string name="Katou">Katou Megumi</string>
+    <string name="Sora">Sora Ginko</string>
+    <string name="Misaka">Misaka Mikoto</string>
+</resources>
