@@ -14,4 +14,6 @@
     <string name="login">Login</string>
     <string name="do_not_have_chatnexus_account_yet_register_now">Do not have ChatNexus account yet? Register now!</string>
     <string name="register">Register</string>
+    <string name="new_register">New Register</string>
+    <string name="user_name">User Name:</string>
 </resources>
