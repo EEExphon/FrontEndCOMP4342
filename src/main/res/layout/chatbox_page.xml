@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/chatbox_page"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal"
+        android:background="#83d0ff">
+
+        <Button
+            android:id="@+id/back_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:text="@string/back_button" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical|center_horizontal"
+            android:orientation="horizontal"
+            android:id="@+id/friendName"
+            android:text="@string/friend_username"
+            android:textSize="25sp" />
+    </FrameLayout>
+
+    <ListView
+        android:layout_margin="10dp"
+        android:id="@+id/chatting"
+        android:layout_width="match_parent"
+        android:layout_height="680dp"
+        android:background="#fff"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:layout_gravity="center_horizontal"
+        android:padding="10dp">
+        <EditText
+            android:id="@+id/user_input_userName"
+            android:layout_width="290dp"
+            android:layout_height="50dp"
+            android:layout_gravity="bottom"
+            android:ems="10">
+            <requestFocus />
+        </EditText>
+        <Button
+            android:id="@+id/send_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:text="@string/send" />
+    </LinearLayout>
+
+
+</LinearLayout>

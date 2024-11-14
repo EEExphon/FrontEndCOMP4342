@@ -16,4 +16,9 @@
     <string name="register">Register</string>
     <string name="new_register">New Register</string>
     <string name="user_name">User Name:</string>
+    <string name="friend_name"><![CDATA[<friend_name>]]></string>
+    <string name="friend_username"><![CDATA[<friend_userName>]]></string>
+    <string name="hello">Hello</string>
+    <string name="send">send</string>
+    <string name="no">no</string>
 </resources>

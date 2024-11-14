@@ -18,6 +18,12 @@ public class Main extends AppCompatActivity {
             "Katou Megumi", "Misaka Mikoto", "Sora Ginko",
             "Katou Megumi", "Misaka Mikoto", "Sora Ginko"};
 
+    private int friendID = 0; //"Katou Megumi"
+    private String[] testChatContent = {"hello", "hello", "bababoey", "aptaptaptapt", "megumi suki"};
+    private int[] orderChat = {2,1,1,2,2};
+
+    private String selfName = "Exphon";
+
     // Setter and getter
     public void setFriendName(String[] friendName) {this.friendName = friendName;}
     public String[] getFriendName() {return friendName;}
@@ -25,25 +31,26 @@ public class Main extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
-        setContentView(R.layout.welcome_page);
+        setContentView(R.layout.chatbox_page);
 
+        TextView friend = findViewById(R.id.friendName);
+        friend.setText(friendName[friendID]);
         //获取ListView对象
-        ListView listView = findViewById(R.id.listView);
+        ListView chatlistView = findViewById(R.id.chatting);
         myAdapter myAdapter = new myAdapter();
-        listView.setAdapter(myAdapter);
+        chatlistView.setAdapter(myAdapter);
     }
 
     class myAdapter extends BaseAdapter{
 
         @Override
         public int getCount() {
-            return friendName.length;
+            return testChatContent.length;
         }
 
         @Override
         public Object getItem(int i) {
-            return friendName[i];
+            return testChatContent[i];
         }
 
         @Override
@@ -54,15 +61,20 @@ public class Main extends AppCompatActivity {
         @Override
         public View getView(int i, View convertView, ViewGroup viewGroup) {
             //1. 加载布局
-            View view = View.inflate(Main.this, R.layout.item_list, null);
+            View view = View.inflate(Main.this, R.layout.chat_layout, null);
 
             //2.获取控件
-            TextView name = view.findViewById(R.id.name1);
+            TextView chat = view.findViewById(R.id.sentence);
             TextView capN = view.findViewById(R.id.capName);
 
             //设置数据
-            name.setText(friendName[i]);
-            capN.setText(friendName[i].substring(0,1));
+            chat.setText(testChatContent[i]);
+            if (orderChat[i] == 1) {
+                capN.setText(friendName[friendID].substring(0, 1));
+            } else if (orderChat[i] == 2) {
+                capN.setText(selfName.substring(0, 1));
+            }
+
             return view;
         }
     }
